@@ -52,21 +52,7 @@ router.post('/', async (req,res) => {
    /* LOGIN */
    else if (text ===  "2"){
         response = `CON Enter passcode`;
-    //    const user = await User.findById(req.params.password);
-    //    if(response === user){
-    //     res.send(user);
-    //    }     
-    // let result =[];
-    
-    //     //assert.equal(null,err);
-    //     var user = db.collection('users').findOne();
-    //     user.forEach(function(doc, err){
-    //         //assert.(null, err)
-    //         result.push(doc);
-    //     }, function(){
-    //         db.close();
-    //     })
-    
+
    }
    else if(text && text.split('*').length === 2 && text.split('*')[0] == 2){
     console.log('>>>>>', text);
