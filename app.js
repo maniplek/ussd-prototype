@@ -3,18 +3,25 @@ const ussdRoute = require('./index');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-
-// KQw0n000qV6ig7Dh
-
-
 const app = express();
 
 //model 
 const user = require('./model/user');
 //const bank = require('./model/banks');
 
-//mongo connection 
+const { MONGOURI} = require('./keys');
 
+//mongo connection 
+mongoose.connect(MONGOURI,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+})
+mongoose.connection.on('connected',()=>{
+    console.log('err connecting....',err);
+})
+mongoose.connection.on('error',()=>{
+    console.log('Connected to MongoDb....');
+})
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
