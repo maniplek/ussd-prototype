@@ -82,24 +82,12 @@ router.post('/', async (req,res) => {
        response = `CON ARE U SURE YOU TO SEND MONEY TO THAT ACCOUNT
           1. Yes 
           2. No`
-          
-          //console.log('>>>>>', text);
-        //   if(text == "1"){
-        //             response = `CON Please Enter Your PIN`
-        //            console.log('>>>>>', text);
-
-        //   }else if (text == "2"){
-        //     response = 'END THANK YOU!!'
-        //   }
         }
    else if(text && text.split('*').length === 9 && text.split('*')[0] == 2){
     response = `CON Please Enter Your PIN`
        console.log('>>>>>', text); }
-//     else if (text && text.split('*').length === 10 && text.split('*')[0] == 2){
-//        response = ` END THANK YOU'VE successfully send money  on this Acount 90000899 
-//        \n Your New balance is: 3,000,000 RFW `
-//        console.log('>>>>>', text);
-//     }
+
+
       else if (text && text.split('*').length === 10 && text.split('*')[0] == 2){
     response = ` CON THANK YOU'VE successfully send money  on this Acount 90000899 
           \n Your New balance is: 3,000,000 RFW
